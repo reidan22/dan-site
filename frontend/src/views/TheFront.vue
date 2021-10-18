@@ -8,6 +8,7 @@
       v-if="showFrontElement"
     >
       {{ currentHello }}!
+      <!-- <img class="front-bg-image centrify" :src="bgImage" alt="" /> -->
     </b-container>
   </transition>
 </template>
@@ -29,6 +30,7 @@ export default {
         "Hola",
       ],
       currentHello: "Kumusta",
+      bgImage: require("@/assets/background/front_element_bg.jpg"),
     };
   },
   methods: {
@@ -52,12 +54,20 @@ export default {
 <style scoped>
 .front-page {
   position: absolute;
-  background-color: rgb(32, 32, 32);
   width: 100vw;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 15vw;
-  color: rgb(151, 187, 253);
+  background-color: #1f2833;
+  color: #66fcf1;
+}
+.front-bg-image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.1;
+  overflow: hidden;
+  background-size: contain;
 }
 
 .slide-fade-leave-active {

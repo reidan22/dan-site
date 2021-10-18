@@ -26,7 +26,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #282c30;
 }
 
 .centrify {
@@ -34,4 +34,13 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+/* 
+Colors:
+#0b0C10
+#1F2833
+#C5C6C7
+#66FCF1
+#45A29e
+*/
 </style>
