@@ -1,13 +1,37 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/> -->
-  <div id="start-cover" class="bg-gray-500">
-    Welcome to my site.
+  <div id="app">
+    <the-front></the-front>
+    <the-main></the-main>
   </div>
 </template>
 
+<script>
+import TheMain from "@/views/TheMain.vue";
+import TheFront from "@/views/TheFront.vue";
+
+export default {
+  name: "App",
+  components: {
+    TheMain,
+    TheFront,
+  },
+};
+</script>
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+#app {
+  /* font-family: Helvetica, Avenir, Arial, sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.centrify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
