@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid>
+  <b-container fluid id="the-body">
     <router-view />
   </b-container>
 </template>
@@ -12,5 +12,9 @@ export default {
 </script>
 
 <style scoped>
-
+#the-body {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
 </style>

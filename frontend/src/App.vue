@@ -21,6 +21,11 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
 #app {
   /* font-family: Helvetica, Avenir, Arial, sans-serif; */
   font-family: "Quicksand", sans-serif;
@@ -34,6 +39,7 @@ export default {
   background-color: #1f2833;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
 .centrify {
@@ -42,7 +48,7 @@ export default {
   justify-content: center;
 }
 
-/* 
+/*
 Colors:
 #0b0C10
 #1F2833

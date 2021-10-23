@@ -1,5 +1,6 @@
 <template>
-  <b-container>
+  <b-container fluid>
+    {{ isLinkClicked() }}
     <span
       id="header-tab"
       @click="
@@ -29,6 +30,7 @@
 export default {
   name: "TheHeaderTab",
   components: {},
+  props: ["isOpen"],
   data() {
     return {
       isHeaderTabOpen: false,
@@ -37,6 +39,11 @@ export default {
   methods: {
     clickHeaderTab() {
       this.isHeaderTabOpen = !this.isHeaderTabOpen;
+    },
+    isLinkClicked() {
+      if (!this.isOpen) {
+        this.isHeaderTabOpen = false;
+      }
     },
   },
 };
@@ -48,7 +55,7 @@ export default {
   top: 2vh;
   left: 20vh;
   height: 5vh;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease, border-radius 1.25s ease;
   font-size: 20px;
 }
 
@@ -71,7 +78,7 @@ export default {
 }
 
 .close-span {
-  width: 10vh;
+  width: 8vh;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-left-radius: 0px;

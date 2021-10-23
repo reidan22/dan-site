@@ -1,12 +1,26 @@
 <template>
-  <b-container fluid id="nav" :class="{ 'open-header': !fromPropsIsOpen }">
-    <b-row> <router-link to="/home">Home</router-link> </b-row
-    ><b-row>
-      <router-link to="/about">About</router-link>
-    </b-row>
-    <b-row>
-      <a href="/gamefront/index.html">Game Front</a>
-    </b-row>
+  <b-container fluid id="nav" :class="{ 'open-header': !checkIfOpen }">
+    {{ fromPropsIsOpen(isOpen) }}
+    <span @click="onClickLink()">
+      <b-row>
+        <router-link to="/home"
+          ><i class="fas fa-home"></i> Home</router-link
+        > </b-row
+      ><b-row>
+        <router-link to="/about"
+          ><i class="fas fa-user"></i> About</router-link
+        > </b-row
+      ><b-row>
+        <router-link to="/projects/drumkit"
+          ><i class="fas fa-drum"></i> Drum Kit</router-link
+        >
+      </b-row>
+      <b-row>
+        <a href="/gamefront/index.html"
+          ><i class="fas fa-gamepad"></i> Game Front</a
+        >
+      </b-row>
+    </span>
   </b-container>
 </template>
 
@@ -14,12 +28,22 @@
 export default {
   name: "TheHeader",
   props: ["isOpen"],
+  data() {
+    return {
+      checkIfOpen: false,
+    };
+  },
   components: {},
-  computed: {
-    fromPropsIsOpen() {
-      return this.isOpen;
+  methods: {
+    onClickLink() {
+      this.fromPropsIsOpen(false);
+      this.$emit("header", false);
+    },
+    fromPropsIsOpen(val) {
+      this.checkIfOpen = val;
     },
   },
+  computed: {},
 };
 </script>
 
@@ -28,14 +52,15 @@ export default {
   position: absolute;
   left: 0px;
   top: 2vh;
-  height: 50vh;
+  /* height: 50vh; */
   width: 20vh;
   background-color: #0b0c1069;
   color: #66fcf1;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   transition: transform 0.5s;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 a {

@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import TheMain from "@/views/TheMain.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
+import DrumKitMain from "@/views/projects/drumkit/DrumKitMain.vue";
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,10 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
+  },  {
+    path: "/projects/drumkit",
+    name: "DrumKit",
+    component: DrumKitMain,
   }, 
 ];
 

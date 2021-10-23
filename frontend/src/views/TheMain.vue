@@ -1,8 +1,14 @@
 <template>
   <b-container fluid id="main"
     ><span id="header-all">
-      <the-header-tab @header-tab="isHeaderTabOpen"></the-header-tab>
-      <the-header :isOpen="receivedIsTabOpen"></the-header>
+      <the-header-tab
+        @header-tab="isHeaderTabOpen"
+        :isOpen="receivedIsTabOpen"
+      ></the-header-tab>
+      <the-header
+        @header="closeHeaderTab"
+        :isOpen="receivedIsTabOpen"
+      ></the-header>
     </span>
     <the-body></the-body>
   </b-container>
@@ -28,6 +34,9 @@ export default {
     isHeaderTabOpen(isTabOpen) {
       this.receivedIsTabOpen = isTabOpen;
     },
+    closeHeaderTab(fromEmit) {
+      this.receivedIsTabOpen = fromEmit;
+    },
   },
 };
 </script>
@@ -35,5 +44,12 @@ export default {
 #main {
   width: 100vw;
   height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-all {
+  margin: 0px;
+  padding: 0px;
 }
 </style>
