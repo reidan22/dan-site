@@ -1,0 +1,84 @@
+<template>
+  <b-container>
+    <span
+      id="header-tab"
+      @click="
+        clickHeaderTab();
+        $emit('header-tab', isHeaderTabOpen);
+      "
+      :class="{
+        'close-span': !isHeaderTabOpen,
+        'open-span': isHeaderTabOpen,
+        centrify: true,
+      }"
+    >
+      <i
+        :class="{
+          fas: true,
+          'fa-chevron-circle-right': !isHeaderTabOpen,
+          'fa-times-circle': isHeaderTabOpen,
+          'icon-open': isHeaderTabOpen,
+          'icon-close': !isHeaderTabOpen,
+        }"
+      ></i>
+    </span>
+  </b-container>
+</template>
+
+<script>
+export default {
+  name: "TheHeaderTab",
+  components: {},
+  data() {
+    return {
+      isHeaderTabOpen: false,
+    };
+  },
+  methods: {
+    clickHeaderTab() {
+      this.isHeaderTabOpen = !this.isHeaderTabOpen;
+    },
+  },
+};
+</script>
+
+<style scoped>
+#header-tab {
+  position: absolute;
+  top: 2vh;
+  left: 20vh;
+  height: 5vh;
+  transition: all 0.5s ease;
+  font-size: 20px;
+}
+
+.icon-open {
+  transform: rotate(-180deg);
+}
+
+.icon-close {
+  transform: rotate(0deg);
+}
+.open-span {
+  width: 5vh;
+  background-color: #0b0c109f;
+  border: solid 1px #66fcf1;
+  color: #66fcf1;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.close-span {
+  width: 10vh;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transform: translateX(-20vh);
+  background-color: #66fcf2be;
+  color: #0b0c10;
+  border: solid 1px #0b0c10;
+}
+</style>

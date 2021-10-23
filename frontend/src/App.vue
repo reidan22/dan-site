@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <b-container fluid id="app">
     <the-front></the-front>
     <the-main></the-main>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -23,10 +23,17 @@ export default {
 
 #app {
   /* font-family: Helvetica, Avenir, Arial, sans-serif; */
+  font-family: "Quicksand", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #282c30;
+  width: 100vw;
+  height: 100vh;
+  color: #66fcf1;
+  background-color: #1f2833;
+  margin: 0px;
+  padding: 0px;
 }
 
 .centrify {

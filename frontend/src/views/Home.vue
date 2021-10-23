@@ -1,8 +1,6 @@
 <template>
   <b-container fluid class="centrify">
-    <b-row>
-      <i class="far fa-heart"></i>
-    </b-row>
+    <b-row> </b-row>
   </b-container>
 </template>
 

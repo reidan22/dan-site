@@ -52,13 +52,18 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  z-index: 10;
+}
 .front-page {
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100vw;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 15vw;
-  background-color: #1f2833;
+  background-color: #0b0c10;
   color: #66fcf1;
 }
 .front-bg-image {
