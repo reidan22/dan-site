@@ -54,7 +54,7 @@ export default {
   top: 2vh;
   /* height: 50vh; */
   width: 20vh;
-  background-color: #0b0c1069;
+  background-color: #0b0c10a2;
   color: #66fcf1;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
