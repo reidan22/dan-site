@@ -1,17 +1,17 @@
 <template>
   <b-row>
     <b-col class="centrify" v-for="key in keys" :key="key.letter">
-      <base-drum-kit-key  :sound="key"></base-drum-kit-key>
-      </b-col>
+      <base-drum-kit-key :sound="key"></base-drum-kit-key>
+    </b-col>
   </b-row>
 </template>
 
 <script>
-  import BaseDrumKitKey from "@/components/BaseDrumKitKey.vue";
+import BaseDrumKitKey from "@/components/BaseDrumKitKey.vue";
 export default {
   name: "DrumKitBody",
   components: {
-    BaseDrumKitKey
+    BaseDrumKitKey,
   },
   data() {
     return {
@@ -44,22 +44,22 @@ export default {
         {
           name: "ride",
           audio: require("@/assets/drumkit/sounds/ride.wav"),
-          letter: "H",
+          letter: "Z",
         },
         {
           name: "snare",
           audio: require("@/assets/drumkit/sounds/snare.wav"),
-          letter: "J",
+          letter: "X",
         },
         {
           name: "tink",
           audio: require("@/assets/drumkit/sounds/tink.wav"),
-          letter: "K",
+          letter: "C",
         },
         {
           name: "tom",
           audio: require("@/assets/drumkit/sounds/tom.wav"),
-          letter: "L",
+          letter: "V",
         },
       ],
     };
@@ -67,6 +67,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

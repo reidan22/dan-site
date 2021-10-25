@@ -68,9 +68,9 @@ export default {
 }
 .open-span {
   width: 5vh;
-  background-color: #0b0c109f;
-  border: solid 1px #66fcf1;
-  color: #66fcf1;
+  background-color: var(--header-base);
+  border: solid 1px var(--header-color);
+  color: var(--header-color);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -84,8 +84,8 @@ export default {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   transform: translateX(-20vh);
-  background-color: #66fcf2be;
-  color: #0b0c10;
-  border: solid 1px #0b0c10;
+  background-color: var(--header-color);
+  color: var(--header-base);
+  border: solid 1px var(--header-base);
 }
 </style>

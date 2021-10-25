@@ -21,12 +21,15 @@ export default {
 
       setTimeout(() => {
         this.keyClicked = false;
-      }, 200);
+      }, 150);
     },
   },
   mounted() {
     document.addEventListener("keydown", (e) => {
-      if (e.key.toLowerCase() === this.sound.letter.toLowerCase()) {
+      if (
+        e.key.toLowerCase() === this.sound.letter.toLowerCase() &&
+        this.$store.state.isDrumKitDisplayed
+      ) {
         this.playSound();
       }
     });

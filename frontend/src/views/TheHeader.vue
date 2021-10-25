@@ -54,17 +54,18 @@ export default {
   top: 2vh;
   /* height: 50vh; */
   width: 20vh;
-  background-color: #0b0c10a2;
-  color: #66fcf1;
+
+  background-color: var(--header-base);
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+  border: 1px solid var(--header-base);
   transition: transform 0.5s;
   overflow: hidden;
   font-size: 1rem;
 }
 
 a {
-  color: #66fcf1;
+  color: var(--header-color);
   text-decoration: none;
   transition: font-size 0.5s;
   padding: 10px;
@@ -72,14 +73,13 @@ a {
 
 a:hover,
 a:active {
-  background-color: #66fcf1;
-  color: #0b0c10;
+  background-color: var(--header-color);
+  color: var(--header-base);
   font-size: 120%;
   transition: font-size 0.5s;
 }
 
 .open-header {
-  background-color: red;
   transition: transform 0.5s;
   transform: translateX(-20vh);
 }

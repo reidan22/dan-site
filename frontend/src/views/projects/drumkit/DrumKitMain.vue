@@ -18,6 +18,15 @@ export default {
     DrumKitHeader,
     DrumKitBody,
   },
+  mounted() {
+    this.$store.commit("changeHeaderColor", "#F1E3BC");
+    this.$store.commit("changeHeaderBase", "#D3AC37");
+    this.$store.commit("toggleDrumKitDisplayed", true);
+  },
+  beforeRouteLeave(to, from, next) {
+    this.$store.commit("toggleDrumKitDisplayed", false);
+    next();
+  },
 };
 </script>
 
@@ -42,7 +51,6 @@ export default {
   height: 80vh;
   margin: 10px;
   background-color: rgb(216, 194, 130);
-
   border-radius: 20px;
 }
 </style>

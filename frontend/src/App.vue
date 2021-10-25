@@ -1,5 +1,9 @@
 <template>
-  <b-container fluid id="app">
+  <b-container
+    fluid
+    id="app"
+    :style="{ '--header-base': headerBase, '--header-color': headerColor }"
+  >
     <the-front></the-front>
     <the-main></the-main>
   </b-container>
@@ -14,6 +18,18 @@ export default {
   components: {
     TheMain,
     TheFront,
+  },
+  mounted() {
+    this.$store.commit("changeHeaderColor", "#66fcf1");
+    this.$store.commit("changeHeaderBase", "#0b0c10a2");
+  },
+  computed: {
+    headerBase() {
+      return this.$store.state.headerBase;
+    },
+    headerColor() {
+      return this.$store.state.headerColor;
+    },
   },
 };
 </script>
