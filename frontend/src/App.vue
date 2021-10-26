@@ -30,6 +30,7 @@ export default {
     headerColor() {
       return this.$store.state.headerColor;
     },
+    created() {},
   },
 };
 </script>

@@ -67,7 +67,7 @@ button.clicked {
     outline: none;
     border: none;
     cursor: none;
-    height: 11vh;
+    height: 23vh;
     width: 11vh;
     border-radius: 7px;
     font-size: 3rem;

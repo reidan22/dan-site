@@ -58,6 +58,7 @@ export default {
   height: 5vh;
   transition: all 0.5s ease, border-radius 1.25s ease;
   font-size: 20px;
+  z-index: 500;
 }
 
 #icon-span {

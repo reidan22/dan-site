@@ -66,6 +66,7 @@ export default {
   transition: transform 0.5s;
   overflow: hidden;
   font-size: 1rem;
+  z-index: 500;
 }
 
 a {

@@ -64,6 +64,7 @@ export default {
   font-family: "Roboto", sans-serif;
   font-size: 15vw;
   background-color: #0b0c10;
+  z-index: 501;
   color: #66fcf1;
 }
 .front-bg-image {

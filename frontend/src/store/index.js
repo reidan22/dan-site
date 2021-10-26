@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     headerColor : "",
     headerBase:"",
-    isDrumKitDisplayed: false
+          isDrumKitDisplayed: false,
+    appTimeSeconds: 0
   },
   mutations: {
 
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     toggleDrumKitDisplayed(state,payload){
       state.isDrumKitDisplayed = payload
+    },
+    countUpAppTimeSeconds(state, payload){
+      state.appTimeSeconds = Math.floor(payload)
     }
   },
   actions: {},

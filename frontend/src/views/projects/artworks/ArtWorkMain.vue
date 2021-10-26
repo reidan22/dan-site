@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       images: ArtList,
-      mode: false,
+      mode: true,
       slide: 0,
       sliding: null,
     };
@@ -148,7 +148,28 @@ export default {
 #toggle:hover {
   transition: all 0.5s ease;
   transform: scale(0.9);
-  transform: rotate(10deg);
+}
+
+a.carousel-control-next,
+a.carousel-control-prev {
+  transition: all 0.5s ease;
+}
+
+a.carousel-control-next:hover {
+  transition: all 0.5s ease;
+  background: linear-gradient(
+    270deg,
+    rgba(56, 56, 56, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+a.carousel-control-prev:hover {
+  transition: all 0.5s ease;
+  background: linear-gradient(
+    90deg,
+    rgba(56, 56, 56, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 @media only screen and (max-width: 500px) {
