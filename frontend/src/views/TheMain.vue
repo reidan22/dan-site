@@ -1,15 +1,17 @@
 <template>
-  <b-container fluid id="main"
-    ><span id="header-all">
-      <the-header-tab
-        @header-tab="isHeaderTabOpen"
-        :isOpen="receivedIsTabOpen"
-      ></the-header-tab>
-      <the-header
-        @header="closeHeaderTab"
-        :isOpen="receivedIsTabOpen"
-      ></the-header>
-    </span>
+  <b-container fluid id="main">
+    <a href="#">
+      <span id="header-all">
+        <the-header-tab
+          @header-tab="isHeaderTabOpen"
+          :isOpen="receivedIsTabOpen"
+        ></the-header-tab>
+        <the-header
+          @header="closeHeaderTab"
+          :isOpen="receivedIsTabOpen"
+        ></the-header>
+      </span>
+    </a>
     <the-body></the-body>
   </b-container>
 </template>

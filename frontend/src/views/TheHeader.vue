@@ -13,11 +13,15 @@
       ><b-row>
         <router-link to="/projects/drumkit"
           ><i class="fas fa-drum"></i> Drum Kit</router-link
+        > </b-row
+      ><b-row>
+        <router-link to="/projects/artworks"
+          ><i class="fas fa-paint-brush" /> Artworks</router-link
         >
       </b-row>
       <b-row>
         <a href="/gamefront/index.html"
-          ><i class="fas fa-gamepad"></i> Game Front</a
+          ><i class="fas fa-gamepad"></i> Game Front*</a
         >
       </b-row>
     </span>
@@ -69,6 +73,7 @@ a {
   text-decoration: none;
   transition: font-size 0.5s;
   padding: 10px;
+  /* border-bottom: 0.1px solid var(--header-color); */
 }
 
 a:hover,

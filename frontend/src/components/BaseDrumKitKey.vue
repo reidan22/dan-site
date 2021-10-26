@@ -39,11 +39,6 @@ export default {
 
 <style scoped>
 button {
-  appearance: none;
-  background: none;
-  outline: none;
-  border: none;
-  cursor: none;
   height: 35vh;
   width: 35vh;
   border-radius: 7px;

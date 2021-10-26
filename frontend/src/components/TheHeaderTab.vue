@@ -14,6 +14,7 @@
       }"
     >
       <i
+        id="icon-span"
         :class="{
           fas: true,
           'fa-chevron-circle-right': !isHeaderTabOpen,
@@ -59,6 +60,15 @@ export default {
   font-size: 20px;
 }
 
+#icon-span {
+  transition: all 0.5s ease;
+}
+
+#icon-span:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.3);
+}
+
 .icon-open {
   transform: rotate(-180deg);
 }
@@ -68,9 +78,9 @@ export default {
 }
 .open-span {
   width: 5vh;
-  background-color: var(--header-base);
-  border: solid 1px var(--header-color);
-  color: var(--header-color);
+  background-color: var(--header-color);
+  border: solid 1px var(--header-base);
+  color: var(--header-base);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -84,8 +94,9 @@ export default {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   transform: translateX(-20vh);
-  background-color: var(--header-color);
-  color: var(--header-base);
-  border: solid 1px var(--header-base);
+  background-color: var(--header-base);
+  color: var(--header-color);
+  border: solid 1px var(--header-color);
+  border-left: none;
 }
 </style>

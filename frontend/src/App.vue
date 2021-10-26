@@ -58,12 +58,21 @@ body {
   overflow: hidden;
 }
 
+button {
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: none;
+}
 .centrify {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.m0 {
+  margin: 0px;
+}
 /*
 Colors:
 #0b0C10

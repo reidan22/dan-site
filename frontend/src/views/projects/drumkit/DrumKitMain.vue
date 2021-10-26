@@ -20,7 +20,7 @@ export default {
   },
   mounted() {
     this.$store.commit("changeHeaderColor", "#F1E3BC");
-    this.$store.commit("changeHeaderBase", "#D3AC37");
+    this.$store.commit("changeHeaderBase", "#b3890d");
     this.$store.commit("toggleDrumKitDisplayed", true);
   },
   beforeRouteLeave(to, from, next) {
